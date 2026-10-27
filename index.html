@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waviify | Log in</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/2dbca3aa8b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <main class="auth-card">
+    <div class="auth-logo">
+      <i class="fa-solid fa-wave-square"></i>
+      <span>Waviify</span>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" class="auth-form" novalidate>
+      <h1>Log in to Waviify</h1>
+
+      <div class="field">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="name@example.com" autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label for="loginPassword">Password</label>
+        <div class="pass-wrap">
+          <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" />
+          <button type="button" class="toggle-pass" data-target="loginPassword" aria-label="Show password">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <p class="form-error" id="loginError"></p>
+
+      <button type="submit" class="auth-btn">Log In</button>
+
+      <p class="auth-switch">Don't have an account? <span id="showSignup">Sign up</span></p>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form id="signupForm" class="auth-form hidden" novalidate>
+      <h1>Sign up for Waviify</h1>
+
+      <div class="field">
+        <label for="signupName">Name</label>
+        <input type="text" id="signupName" placeholder="Your name" autocomplete="name" maxlength="40" />
+      </div>
+
+      <div class="field">
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" placeholder="name@example.com" autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label for="signupPassword">Password</label>
+        <div class="pass-wrap">
+          <input type="password" id="signupPassword" placeholder="At least 6 characters" autocomplete="new-password" />
+          <button type="button" class="toggle-pass" data-target="signupPassword" aria-label="Show password">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <p class="form-error" id="signupError"></p>
+
+      <button type="submit" class="auth-btn">Sign Up</button>
+
+      <p class="auth-switch">Already have an account? <span id="showLogin">Log in</span></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
